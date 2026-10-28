@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "steven2dah-resbudget"
+version = "0.1.0"
+description = "从样本里推断图像输入的分辨率预算应有的字段集合，逐字段检查存在性与类型，缺失项单独列出"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "steven2dah" }]
+keywords = ["ai", "llm", "cli", "analysis"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://steven2dah.github.io"
+Repository = "https://github.com/steven2dah/resbudget"
+Issues = "https://github.com/steven2dah/resbudget/issues"
+
+[project.scripts]
+resbudget = "resbudget:main"
+
+[tool.setuptools]
+py-modules = ["resbudget"]
